@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 ruby file: ".ruby-version"
 
+gem "good_migrations"
 gem "vite_rails", "~> 3.0"
 gem "rails", "~> 7.2.1"
 gem "pg", "~> 1.1"
