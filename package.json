@@ -15,9 +15,9 @@
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.10",
-    "autoprefixer": "^10.4.14",
+    "autoprefixer": "^10.4.20",
     "modern-normalize": "^3.0.0",
-    "postcss": "^8.4.24",
+    "postcss": "^8.4.47",
     "rollup": "^4.2.0",
     "stimulus-vite-helpers": "^3.1.0",
     "vite": "^5.0.0",
@@ -26,6 +26,7 @@
   "devDependencies": {
     "@eslint/js": "^9.11.0",
     "@types/eslint": "^9.6.1",
+    "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^9",
     "eslint-config-prettier": "^9.1.0",
     "eslint-formatter-compact": "^8.40.0",
@@ -36,6 +37,7 @@
     "stylelint": "^16.9.0",
     "stylelint-config-standard": "^36.0.1",
     "stylelint-declaration-strict-value": "^1.10.6",
-    "stylelint-prettier": "^5.0.2"
+    "stylelint-prettier": "^5.0.2",
+    "tailwindcss": "^3.4.12"
   }
 }
