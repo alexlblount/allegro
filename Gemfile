@@ -20,6 +20,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "bundler-audit", require: false
   gem "annotate"
   gem "web-console"
 end
