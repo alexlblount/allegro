@@ -1,39 +1,45 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 
 ruby file: ".ruby-version"
 
+gem "bootsnap", require: false
 gem "good_migrations"
-gem "vite_rails", "~> 3.0"
-gem "rails", "~> 7.2.1"
+gem "jbuilder"
 gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
-gem "turbo-rails"
+gem "rails", "~> 7.2.1"
 gem "stimulus-rails"
-gem "jbuilder"
-gem "tzinfo-data", platforms: %i[ windows jruby ]
-gem "bootsnap", require: false
+gem "turbo-rails"
+gem "tzinfo-data", platforms: %i[windows jruby]
+gem "vite_rails", "~> 3.0"
 
 group :development, :test do
-  gem "factory_bot_rails"
-  gem "dotenv", ">= 3.0"
-  gem "rspec-rails"
-  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
   gem "brakeman", require: false
-  gem "rubocop-rails-omakase", require: false
+  gem "debug", platforms: %i[mri windows], require: "debug/prelude"
+  gem "dotenv", ">= 3.0"
+  gem "factory_bot_rails"
+  gem "rspec-rails"
 end
 
 group :development do
-  gem "letter_opener"
-  gem "erb_lint", require: false
-  gem "bundler-audit", require: false
   gem "annotate"
+  gem "bundler-audit", require: false
+  gem "erb_lint", require: false
+  gem "letter_opener"
+  gem "rubocop", require: false
+  gem "rubocop-capybara", require: false
+  gem "rubocop-factory_bot", require: false
+  gem "rubocop-performance", require: false
+  gem "rubocop-rails", ">= 2.22.0", require: false
   gem "web-console"
 end
 
 group :test do
-  gem "shoulda-matchers"
-  gem "selenium-webdriver", require: false
   gem "capybara", require: false
+  gem "selenium-webdriver", require: false
+  gem "shoulda-matchers"
 end
 
 group :production do
