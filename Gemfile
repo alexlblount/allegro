@@ -35,3 +35,7 @@ group :test do
   gem "selenium-webdriver", require: false
   gem "capybara", require: false
 end
+
+group :production do
+  gem "sidekiq", "~> 7.0"
+end
