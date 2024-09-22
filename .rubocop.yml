@@ -1,8 +1,10 @@
 require:
   - rubocop-capybara
   - rubocop-factory_bot
+  - rubocop-i18n
   - rubocop-performance
   - rubocop-rails
+  - rubocop-rspec
 
 inherit_mode:
   merge:
@@ -16,7 +18,8 @@ AllCops:
     - .tomo/**/*.rb
   Exclude:
     # ignore bin/* except for bin/setup
-    - !ruby/regexp /<%= Regexp.quote(File.expand_path("bin", __dir__)) %>\/(?!setup).*/
+    # - !ruby/regexp /<%= Regexp.quote(File.expand_path("bin", __dir__)) %>\/(?!setup).*/
+    - bin/*
     - .git/**/*
     - db/*schema.rb
     - log/**/*
@@ -52,6 +55,7 @@ Layout/HashAlignment:
   EnforcedLastArgumentHashStyle: always_inspect
 
 Layout/LineLength:
+  Max: 128
   Exclude:
     - config/initializers/content_security_policy.rb
 
@@ -90,12 +94,14 @@ Metrics/AbcSize:
   Enabled: false
 
 Metrics/BlockLength:
+  CountAsOne: ['array', 'hash', 'heredoc', 'method_call']
   Max: 25
   Exclude:
     - config/**/*
     - test/**/*
 
 Metrics/ClassLength:
+  CountAsOne: ['array', 'hash', 'heredoc', 'method_call']
   Max: 200
   Exclude:
     - test/**/*
@@ -104,6 +110,7 @@ Metrics/CyclomaticComplexity:
   Enabled: false
 
 Metrics/MethodLength:
+  CountAsOne: ['array', 'hash', 'heredoc', 'method_call']
   Max: 25
   Exclude:
     - bin/setup
@@ -111,6 +118,7 @@ Metrics/MethodLength:
     - test/**/*
 
 Metrics/ModuleLength:
+  CountAsOne: ['array', 'hash', 'heredoc', 'method_call']
   Max: 200
   Exclude:
     - config/**/*
@@ -210,6 +218,9 @@ Style/FetchEnvVar:
 Style/FormatStringToken:
   Enabled: false
 
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
 Style/GuardClause:
   Enabled: false
 
@@ -235,10 +246,10 @@ Style/StringConcatenation:
   Enabled: false
 
 Style/StringLiterals:
-  EnforcedStyle: double_quotes
+  EnforcedStyle: single_quotes
 
 Style/StringLiteralsInInterpolation:
-  EnforcedStyle: double_quotes
+  EnforcedStyle: single_quotes
 
 Style/SymbolArray:
   Enabled: false
@@ -248,3 +259,23 @@ Style/TrivialAccessors:
 
 Style/YodaExpression:
   Enabled: false
+
+# Rspec
+RSpec/FilePath:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 3
+
+RSpec/NestedGroups:
+  Max: 5
+
+RSpec/ExampleLength:
+  CountAsOne: ['array', 'hash', 'heredoc', 'method_call']
+
+# I18n
+I18n/GetText:
+  Enabled: false
+
+I18n/RailsI18n:
+  Enabled: true
