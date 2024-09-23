@@ -4,7 +4,7 @@
     <title><%= content_for?(:title) ? strip_tags(yield(:title)) : "Allegro" %></title>
     <meta name="apple-mobile-web-app-title" content="Allegro">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -14,8 +14,13 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
+    <script>
+      var global = window;
+    </script>
+
     <%= vite_client_tag %>
-    <%= vite_javascript_tag "application", "data-turbo-track": "reload" %>
+    <%= vite_react_refresh_tag %>
+    <%= vite_javascript_tag 'application', "data-turbo-track": "reload" %>
     <!--
       If using a TypeScript entrypoint file:
         vite_typescript_tag 'application'
@@ -25,10 +30,10 @@
 
       Visit the guide for more information: https://vite-ruby.netlify.app/guide/rails
     -->
-
   </head>
 
   <body>
+    <div id="root"></div>
     <%= yield %>
   </body>
 </html>

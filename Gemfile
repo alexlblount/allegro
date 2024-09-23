@@ -72,8 +72,8 @@ group :development do
   gem 'rubocop-i18n', require: false
   gem 'rubocop-rspec', require: false
   gem 'ruby-lsp'
-  gem 'syntax_tree', '6.2.0'
-  gem 'syntax_tree-rbs', '1.0.0'
+  gem 'syntax_tree'
+  gem 'syntax_tree-rbs'
 end
 
 group :test do

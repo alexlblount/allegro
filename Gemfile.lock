@@ -516,8 +516,8 @@ DEPENDENCIES
   sidekiq (~> 7.0)
   simplecov
   stimulus-rails
-  syntax_tree (= 6.2.0)
-  syntax_tree-rbs (= 1.0.0)
+  syntax_tree
+  syntax_tree-rbs
   test-prof
   turbo-rails
   tzinfo-data
