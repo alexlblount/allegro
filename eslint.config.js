@@ -66,6 +66,8 @@ export default [
       "@typescript-eslint/no-explicit-any": "off",
       // Not needed with TypeScript
       "react/prop-types": "off",
+      // Not needed with the automatic JSX runtime
+      "react/react-in-jsx-scope": "off",
       // Validates that components can safely be updated with fast refresh
       "react-refresh/only-export-components": "warn",
     },

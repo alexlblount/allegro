@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
   plugins: [
     react({
-      jsxRuntime: "classic",
+      jsxRuntime: "automatic",
     }),
     ViteRails({
       envVars: { RAILS_ENV: "development" },
