@@ -5,5 +5,5 @@
 @tailwind utilities;
 
 body {
-  color: green;
+  @apply green;
 }
