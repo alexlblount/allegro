@@ -5,13 +5,13 @@
     "node": "^18.12.0 || >= 20.0.0"
   },
   "scripts": {
-    "lint:js": "eslint 'app/{assets,components,frontend,javascript}/**/*.{cjs,js,jsx,ts,tsx}'",
-    "fix:js": "npm run -- lint:js --fix",
-    "lint": "npm-run-all lint:**",
     "fix": "npm-run-all fix:**",
-    "lint:css": "stylelint 'app/{components,frontend,assets/stylesheets}/**/*.css'",
     "fix:css": "npm run -- lint:css --fix",
+    "fix:js": "npm run -- lint:js --fix",
     "fix:rb": "bundle exec rubocop -A",
+    "lint": "npm-run-all lint:**",
+    "lint:css": "stylelint 'app/{components,frontend,assets/stylesheets}/**/*.css'",
+    "lint:js": "eslint 'app/{assets,components,frontend,javascript}/**/*.{cjs,js,jsx,ts,tsx}'",
     "lint:rb": "bundle exec rubocop"
   },
   "dependencies": {

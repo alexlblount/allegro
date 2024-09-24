@@ -1,0 +1,13 @@
+<!-- app/views/pages/landing/_hero.html.erb -->
+<main class="container mx-auto px-6 py-16">
+  <div class="flex flex-col-reverse md:flex-row items-center">
+    <div class="md:w-1/2 md:pr-12">
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Welcome to YourApp</h1>
+      <p class="text-xl mb-8">Discover how our app can revolutionize your workflow and boost productivity.</p>
+      <%= link_to "Get Started", "#", class: "bg-blue-500 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-600 transition duration-300" %>
+    </div>
+    <div class="md:w-1/2 mb-8 md:mb-0">
+      <img src="/api/placeholder/500/300" alt="App Screenshot" class="rounded-lg shadow-lg">
+    </div>
+  </div>
+</main>
