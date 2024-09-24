@@ -10,8 +10,8 @@ module BasicAuth
   private
 
   def require_basic_auth
-    expected_username = ENV.fetch("BASIC_AUTH_USERNAME", nil)
-    expected_password = ENV.fetch("BASIC_AUTH_PASSWORD", nil)
+    expected_username = ENV.fetch('BASIC_AUTH_USERNAME', nil)
+    expected_password = ENV.fetch('BASIC_AUTH_PASSWORD', nil)
     return true if expected_username.blank? || expected_password.blank?
 
     authenticate_or_request_with_http_basic do |username, password|

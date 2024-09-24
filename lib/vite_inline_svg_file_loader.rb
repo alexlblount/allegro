@@ -9,7 +9,7 @@ module ViteInlineSvgFileLoader
       if vite.dev_server_running?
         fetch_from_dev_server(vite_asset_path)
       else
-        Rails.public_path.join(vite_asset_path.sub(%r{^/}, "")).read
+        Rails.public_path.join(vite_asset_path.sub(%r{^/}, '')).read
       end
     end
 

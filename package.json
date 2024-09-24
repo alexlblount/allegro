@@ -10,7 +10,9 @@
     "lint": "npm-run-all lint:**",
     "fix": "npm-run-all fix:**",
     "lint:css": "stylelint 'app/{components,frontend,assets/stylesheets}/**/*.css'",
-    "fix:css": "npm run -- lint:css --fix"
+    "fix:css": "npm run -- lint:css --fix",
+    "fix:rb": "bundle exec rubocop -A",
+    "lint:rb": "bundle exec rubocop"
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
