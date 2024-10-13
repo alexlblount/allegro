@@ -32,7 +32,7 @@ gem 'pg_search'
 
 # Services
 gem 'redis'
-# gem 'sidekiq'
+gem 'sidekiq'
 
 # Utilities
 gem 'indefinite_article'
@@ -89,6 +89,6 @@ group :test do
   gem 'test-prof'
 end
 
-group :production do
-  gem 'sidekiq', '~> 7.0'
-end
+# group :production do
+#   gem 'sidekiq', '~> 7.0'
+# end

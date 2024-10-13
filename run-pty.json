@@ -12,5 +12,12 @@
       "ready in": null
     },
     "defaultStatus": ["⏳", "S"]
+  },
+  {
+    "command": ["bundle", "exec", "sidekiq"],
+    "status": {
+      "Starting processing": null
+    },
+    "defaultStatus": ["⏳", "S"]
   }
 ]

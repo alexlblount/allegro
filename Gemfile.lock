@@ -513,7 +513,7 @@ DEPENDENCIES
   selenium-webdriver
   shoulda-callback-matchers
   shoulda-matchers
-  sidekiq (~> 7.0)
+  sidekiq
   simplecov
   stimulus-rails
   syntax_tree

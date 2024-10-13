@@ -75,7 +75,7 @@ Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
 
 Layout/SpaceInsideHashLiteralBraces:
-  EnforcedStyle: no_space
+  EnforcedStyle: compact
   EnforcedStyleForEmptyBraces: no_space
 
 Lint/AmbiguousBlockAssociation:
@@ -130,7 +130,6 @@ Metrics/PerceivedComplexity:
   Max: 8
   Exclude:
     - bin/setup
-
 
 Naming/FileName:
   Exclude:
