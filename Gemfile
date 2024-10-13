@@ -71,6 +71,7 @@ group :development do
   gem 'better_errors'
   gem 'rubocop-i18n', require: false
   gem 'rubocop-rspec', require: false
+  gem 'rubocop-rspec_rails', require: false
   gem 'ruby-lsp'
   gem 'syntax_tree'
   gem 'syntax_tree-rbs'

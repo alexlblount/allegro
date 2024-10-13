@@ -5,6 +5,7 @@ require:
   - rubocop-performance
   - rubocop-rails
   - rubocop-rspec
+  - rubocop-rspec_rails
 
 inherit_mode:
   merge:
@@ -259,9 +260,13 @@ Style/TrivialAccessors:
 Style/YodaExpression:
   Enabled: false
 
-# Rspec
-RSpec/FilePath:
+# Rails
+Rails/FilePath:
   Enabled: false
+
+# Rspec
+# RSpec/FilePath:
+#   Enabled: false
 
 RSpec/MultipleExpectations:
   Max: 3
