@@ -84,4 +84,8 @@ Rails.application.configure do
   # Disable `Link: ... rel=preload` header to work around Safari caching bug
   # https://bugs.webkit.org/show_bug.cgi?id=193533
   config.action_view.preload_links_header = false
+
+  # leaving for reference. the app starts vite as a separate process, so i
+  # don't believe this is necessary.
+  # config.vite.dev_server.enabled = true
 end

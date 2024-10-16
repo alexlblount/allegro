@@ -1,0 +1,118 @@
+-------------------------------------------------------------------------------
+audited
+-------------------------------------------------------------------------------
+rails generate audited:install
+rails db:migrate
+
+if wanting to customize behavior, set up "config/initializers/audited.rb" with:
+  Audited.config do |config|
+    config.audit_class = CustomAudit
+  end
+
+
+
+-------------------------------------------------------------------------------
+geocoder
+-------------------------------------------------------------------------------
+Disabled unless production.  need to get api key if serious about use.
+
+config/initializers/geocoder.rb:
+
+Geocoder.configure(
+  lookup: :google,
+  api_key: ENV['GOOGLE_API_KEY'],
+  timeout: 5,
+  units: :km
+)
+
+
+
+-------------------------------------------------------------------------------
+devise [DISABLED]
+-------------------------------------------------------------------------------
+Reference devise docs!
+
+rails generate devise:install
+rails generate devise User
+
+Devise will generate a config/initializers/devise.rb file to customize
+
+
+
+-------------------------------------------------------------------------------
+stimulus-rails
+-------------------------------------------------------------------------------
+rails stimulus:install
+
+No initializers are needed, but you'll need to organize your Stimulus 
+controllers properly under app/javascript/controllers/
+
+
+
+-------------------------------------------------------------------------------
+turbo-rails
+-------------------------------------------------------------------------------
+rails turbo:install
+
+No initializer required, but you'll need to ensure Turbo is correctly set up 
+in your layout files:
+
+<%= javascript_include_tag "application", type: "module" %>
+
+
+
+-------------------------------------------------------------------------------
+imgproxy-rails [DISABLED]
+-------------------------------------------------------------------------------
+This will need an initializer if enabled. Example:
+config/initializers/imgproxy.rb
+
+Imgproxy.configure do |config|
+  config.endpoint = ENV.fetch("IMGPROXY_URL", "http://localhost:8080")
+  config.secret = ENV["IMGPROXY_SECRET"]
+  config.salt = ENV["IMGPROXY_SALT"]
+end
+
+
+
+-------------------------------------------------------------------------------
+premailer-rails [DISABLED]
+-------------------------------------------------------------------------------
+This will need an initializer if enabled. Example:
+config/initializers/premailer_rails.rb
+
+Premailer::Rails.config.merge!(preserve_styles: true, remove_ids: true)
+
+
+
+-------------------------------------------------------------------------------
+graphql
+-------------------------------------------------------------------------------
+rails generate graphql:install
+
+
+
+-------------------------------------------------------------------------------
+lograge [DISABLED]
+-------------------------------------------------------------------------------
+global (or just in production)
+
+config/initializers/lograge.rb
+
+Rails.application.configure do
+  config.lograge.enabled = true
+  config.lograge.formatter = Lograge::Formatters::Json.new
+end
+
+
+
+-------------------------------------------------------------------------------
+yabeda and plugins [DISABLED]
+-------------------------------------------------------------------------------
+config/initializers/yabeda.rb
+
+Yabeda.configure do
+  Yabeda::Puma.plugin!
+  Yabeda::Sidekiq.plugin!
+  # ... other plugins ...
+end
