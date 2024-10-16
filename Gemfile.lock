@@ -256,6 +256,9 @@ GEM
     ffi (1.17.0-x86_64-darwin)
     ffi (1.17.0-x86_64-linux-gnu)
     fiber-storage (1.0.0)
+    fuubar (2.5.1)
+      rspec-core (~> 3.0)
+      ruby-progressbar (~> 1.4)
     geocoder (1.8.3)
       base64 (>= 0.1.0)
       csv (>= 3.0.0)
@@ -393,6 +396,7 @@ GEM
     minitest (5.25.1)
     msgpack (1.7.2)
     mutex_m (0.2.0)
+    n_plus_one_control (0.7.2)
     nanoid (2.0.0)
     nap (1.1.0)
     net-http (0.4.1)
@@ -519,11 +523,17 @@ GEM
     retriable (3.1.2)
     rexml (3.3.7)
     rouge (4.4.0)
+    rspec (3.13.0)
+      rspec-core (~> 3.13.0)
+      rspec-expectations (~> 3.13.0)
+      rspec-mocks (~> 3.13.0)
     rspec-core (3.13.1)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
+    rspec-instafail (1.0.0)
+      rspec
     rspec-mocks (3.13.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
@@ -729,6 +739,7 @@ DEPENDENCIES
   evil-seed
   factory_bot_rails
   fakeredis
+  fuubar
   geocoder
   good_migrations
   graphql (~> 2.3)
@@ -743,6 +754,7 @@ DEPENDENCIES
   kaminari
   letter_opener
   lookbook
+  n_plus_one_control
   nanoid
   nokogiri
   oj
@@ -757,6 +769,7 @@ DEPENDENCIES
   rails-pg-extras
   redis
   retriable
+  rspec-instafail
   rspec-rails
   rubocop
   rubocop-capybara

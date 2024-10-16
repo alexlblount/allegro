@@ -168,15 +168,15 @@ group :test do
   # Integration Testing
   gem 'capybara', require: false
   # gem 'capybara-thruster'
-  gem 'selenium-webdriver', require: false
+  gem 'selenium-webdriver', require: false # replace with cuprite for headless testing?
 
   # Testing Tools
   # gem 'cuprite'
   gem 'fakeredis', require: 'fakeredis/rspec'
-  # gem 'fuubar', require: false
-  # gem 'n_plus_one_control'
+  gem 'fuubar', require: false
+  gem 'n_plus_one_control'
   gem 'rails-controller-testing'
-  # gem 'rspec-instafail', require: false
+  gem 'rspec-instafail', require: false
   gem 'shoulda-callback-matchers'
   gem 'shoulda-matchers'
   # gem 'site_prism'
