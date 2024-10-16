@@ -2,35 +2,6 @@ ChatGPT Conversation for Reference
 https://chatgpt.com/share/670f4470-5d18-8004-bbdf-33a633def679
 
 -------------------------------------------------------------------------------
-audited
--------------------------------------------------------------------------------
-rails generate audited:install
-rails db:migrate
-
-if wanting to customize behavior, set up "config/initializers/audited.rb" with:
-  Audited.config do |config|
-    config.audit_class = CustomAudit
-  end
-
-
-
--------------------------------------------------------------------------------
-geocoder
--------------------------------------------------------------------------------
-Disabled unless production.  need to get api key if serious about use.
-
-config/initializers/geocoder.rb:
-
-Geocoder.configure(
-  lookup: :google,
-  api_key: ENV['GOOGLE_API_KEY'],
-  timeout: 5,
-  units: :km
-)
-
-
-
--------------------------------------------------------------------------------
 devise [DISABLED]
 -------------------------------------------------------------------------------
 Reference devise docs!
@@ -47,8 +18,8 @@ stimulus-rails
 -------------------------------------------------------------------------------
 rails stimulus:install
 
-No initializers are needed, but you'll need to organize your Stimulus 
-controllers properly under app/javascript/controllers/
+No initializer required, but you'll need to organize your Stimulus controllers 
+properly under app/javascript/controllers/
 
 
 
@@ -92,6 +63,16 @@ Premailer::Rails.config.merge!(preserve_styles: true, remove_ids: true)
 graphql
 -------------------------------------------------------------------------------
 rails generate graphql:install
+also look up integration with the other graphql gems on their git pages:
+
+# Cursor-based pagination for connections
+gem 'graphql-connections'
+# Caching for GraphQL done right
+gem 'graphql-fragment_cache'
+# Support for Apollo persisted queries
+gem 'graphql-persisted_queries'
+# Authorization for GraphQL
+gem 'action_policy-graphql'
 
 
 
