@@ -46,5 +46,9 @@ module Allegro
 
     # Use Sidekiq for ActiveJob
     config.active_job.queue_adapter = :sidekiq
+
+    # graphql-ruby-fragment_cache
+    # arguments and options are the same as for `config.cache_store`
+    config.graphql_fragment_cache.store = :redis_cache_store
   end
 end

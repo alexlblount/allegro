@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-GraphQL::FragmentCache::Cache.store = Redis.new(url: ENV['REDIS_URL'])
+# graphql-ruby-fragment_cache
+# https://github.com/DmitryTsepelev/graphql-ruby-fragment_cache?tab=readme-ov-file#execution-errors-and-caching
+GraphQL::FragmentCache.skip_cache_when_query_has_errors = true
 
-GraphQL::PersistedQueries.configure do |config|
-  config.storage = :redis
-  config.redis_client = Redis.new(url: ENV['REDIS_URL'])
-end
+# how to disable for test env:
+# GraphQL::FragmentCache.enabled = false if Rails.env.test?
