@@ -195,3 +195,4 @@ group :production do
   # gem 'yabeda-puma-plugin', require: false
   # gem 'yabeda-sidekiq', require: false
 end
+gem "graphiql-rails", group: :development

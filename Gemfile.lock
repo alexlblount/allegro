@@ -280,6 +280,8 @@ GEM
     google-protobuf (3.25.5-x86_64-linux)
     googleapis-common-protos-types (1.16.0)
       google-protobuf (>= 3.18, < 5.a)
+    graphiql-rails (1.10.1)
+      railties
     graphql (2.3.18)
       base64
       fiber-storage
@@ -742,6 +744,7 @@ DEPENDENCIES
   fuubar
   geocoder
   good_migrations
+  graphiql-rails
   graphql (~> 2.3)
   graphql-connections
   graphql-fragment_cache

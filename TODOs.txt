@@ -74,6 +74,9 @@ gem 'graphql-persisted_queries'
 # Authorization for GraphQL
 gem 'action_policy-graphql'
 
+also setup apollo on front-end is needed for fragment and/or persisted queries:
+https://github.com/DmitryTsepelev/graphql-ruby-persisted_queries?tab=readme-ov-file#getting-started
+
 
 
 -------------------------------------------------------------------------------

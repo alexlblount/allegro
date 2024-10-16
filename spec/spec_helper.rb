@@ -16,6 +16,7 @@ SimpleCov.start 'rails' do
   # Group files by type for easier navigation in the coverage report
   add_group 'Channels', 'app/channels'
   add_group 'Controllers', 'app/controllers'
+  add_group 'GraphQL', 'app/graphql'
   add_group 'Helpers', 'app/helpers'
   add_group 'Jobs', 'app/jobs'
   add_group 'Mailers', 'app/mailers'

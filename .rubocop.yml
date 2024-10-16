@@ -139,6 +139,11 @@ Naming/FileName:
 Naming/MemoizedInstanceVariableName:
   Enabled: false
 
+Naming/MethodParameterName:
+  AllowedNames:
+    - e
+    - id
+
 Naming/VariableNumber:
   Enabled: false
 
