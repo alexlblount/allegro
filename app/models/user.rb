@@ -44,11 +44,13 @@ class User < ApplicationRecord
   has_one :profile, dependent: :destroy
   accepts_nested_attributes_for :profile
 
-  after_create :create_profile
+  after_create :ensure_profile_exists
 
   private
 
-  def create_profile
-    Profile.create(user: self)
+  def ensure_profile_exists
+    return if profile.present?
+
+    build_profile.save(validate: false)
   end
 end
