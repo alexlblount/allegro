@@ -2,12 +2,10 @@
 
 module Types
   class QueryType < Types::BaseObject
+    description 'The query root of this schema'
+
     field :node, Types::NodeType, null: true, description: 'Fetches an object given its ID' do
       argument :id, ID, required: true, description: 'ID of the object'
-    end
-
-    def node(id:)
-      context.schema.object_from_id(id, context)
     end
 
     field :nodes,
@@ -15,10 +13,6 @@ module Types
       null: true,
       description: 'Fetches a list of objects given a list of IDs' do
       argument :ids, [ID], required: true, description: 'IDs of the objects'
-    end
-
-    def nodes(ids:)
-      ids.map { |id| context.schema.object_from_id(id, context) }
     end
 
     # Add root-level fields here.
@@ -29,6 +23,14 @@ module Types
       String,
       null: false,
       description: 'An example field added by the generator'
+
+    def node(id:)
+      context.schema.object_from_id(id, context)
+    end
+
+    def nodes(ids:)
+      ids.map { |id| context.schema.object_from_id(id, context) }
+    end
 
     def test_field
       'Hello World!' # rubocop:disable I18n/RailsI18n/DecorateString

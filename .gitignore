@@ -49,3 +49,6 @@ node_modules
 *.local
 
 !/.env.sample
+
+# Coverage directory used by tools like SimpleCov
+/coverage/

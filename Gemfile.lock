@@ -111,6 +111,7 @@ GEM
       activerecord (>= 5.2, < 8.0)
       activesupport (>= 5.2, < 8.0)
     base64 (0.2.0)
+    bcrypt (3.1.20)
     benchmark-ips (2.14.0)
     better_errors (2.10.1)
       erubi (>= 1.0.0)
@@ -202,6 +203,12 @@ GEM
       ruby-statistics (>= 4.0.1)
       ruby2_keywords
       thor (>= 0.19, < 2)
+    devise (4.9.4)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
     diff-lcs (1.5.1)
     discard (1.3.0)
       activerecord (>= 4.2, < 8)
@@ -432,6 +439,7 @@ GEM
       bigdecimal (>= 3.0)
       ostruct (>= 0.2)
     open4 (1.3.4)
+    orm_adapter (0.5.0)
     ostruct (0.6.0)
     paco (0.2.3)
     parallel (1.26.3)
@@ -448,6 +456,8 @@ GEM
       railties (>= 4.0.0)
     postgresql_cursor (0.6.9)
       activerecord (>= 6.0)
+    pretender (0.5.0)
+      actionpack (>= 6.1)
     prettier_print (1.2.1)
     prism (1.0.0)
     psych (5.1.2)
@@ -522,6 +532,9 @@ GEM
     reline (0.5.10)
       io-console (~> 0.5)
     require-hooks (0.2.2)
+    responders (3.1.1)
+      actionpack (>= 5.2)
+      railties (>= 5.2)
     retriable (3.1.2)
     rexml (3.3.7)
     rouge (4.4.0)
@@ -564,6 +577,8 @@ GEM
       rubocop (~> 1.41)
     rubocop-factory_bot (2.26.1)
       rubocop (~> 1.61)
+    rubocop-graphql (1.5.4)
+      rubocop (>= 1.50, < 2)
     rubocop-i18n (3.0.0)
       rubocop (~> 1.0)
     rubocop-performance (1.22.1)
@@ -680,6 +695,8 @@ GEM
       dry-cli (>= 0.7, < 2)
       rack-proxy (~> 0.6, >= 0.6.1)
       zeitwerk (~> 2.2)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -732,6 +749,7 @@ DEPENDENCIES
   database_validations
   debug
   derailed_benchmarks
+  devise
   discard
   dotenv (>= 3.0)
   dry-effects
@@ -765,6 +783,7 @@ DEPENDENCIES
   pg_search
   pg_trunk
   postgresql_cursor
+  pretender
   puma (>= 5.0)
   rack-mini-profiler
   rails (~> 7.2.1)
@@ -777,6 +796,7 @@ DEPENDENCIES
   rubocop
   rubocop-capybara
   rubocop-factory_bot
+  rubocop-graphql
   rubocop-i18n
   rubocop-performance
   rubocop-rails (>= 2.22.0)

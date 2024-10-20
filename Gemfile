@@ -37,7 +37,10 @@ gem 'store_attribute'
 gem 'store_model'
 
 # Authentication
-# gem 'devise'
+gem 'devise'
+# gem 'devise-pwned_password' # requires config: https://github.com/michaelbanfield/devise-pwned_password
+# gem 'devise-security' # requires config: https://github.com/devise-security/devise-security
+gem 'pretender'
 
 # Authorization
 gem 'action_policy'
@@ -68,6 +71,7 @@ gem 'graphql-fragment_cache'
 gem 'graphql-persisted_queries'
 # Authorization for GraphQL
 gem 'action_policy-graphql'
+gem 'graphiql-rails', group: :development
 gem 'graphql-schema_comparator', group: :development
 
 # Other Utilities
@@ -123,6 +127,7 @@ group :development do # rubocop:disable Metrics/BlockLength
   gem 'rubocop', require: false
   gem 'rubocop-capybara', require: false
   gem 'rubocop-factory_bot', require: false
+  gem 'rubocop-graphql', require: false
   gem 'rubocop-i18n', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', '>= 2.22.0', require: false
@@ -195,4 +200,3 @@ group :production do
   # gem 'yabeda-puma-plugin', require: false
   # gem 'yabeda-sidekiq', require: false
 end
-gem "graphiql-rails", group: :development

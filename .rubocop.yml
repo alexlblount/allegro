@@ -1,6 +1,7 @@
 require:
   - rubocop-capybara
   - rubocop-factory_bot
+  - rubocop-graphql
   - rubocop-i18n
   - rubocop-performance
   - rubocop-rails
