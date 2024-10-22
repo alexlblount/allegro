@@ -22,6 +22,9 @@ Bundler.require(*Rails.groups)
 
 module Allegro
   class Application < Rails::Application
+    config.autoload_paths << Rails.root.join('app', 'frontend', 'components')
+    config.view_component.preview_paths << Rails.root.join('app', 'frontend', 'components')
+
     config.active_record.query_log_tags_enabled = true
     config.active_record.query_log_tags = [
       # Rails query log tags:

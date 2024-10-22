@@ -55,5 +55,8 @@
     "useragent",
     "vite",
     "zeitwerk"
-  ]
+  ],
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  }
 }
