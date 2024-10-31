@@ -11,7 +11,7 @@ ruby file: '.ruby-version'
 gem 'bootsnap', require: false
 gem 'pg', '~> 1.5'
 gem 'puma', '>= 5.0'
-gem 'rails', '~> 7.2.1'
+gem 'rails', '~> 7.2.2'
 
 # Background Jobs
 gem 'redis'
