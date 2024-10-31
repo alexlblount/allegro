@@ -135,7 +135,6 @@ group :development do # rubocop:disable Metrics/BlockLength
   gem 'rubocop-rspec_rails', require: false
 
   # Language Server Protocol and Syntax Tools
-  gem 'ruby-lsp'
   gem 'syntax_tree'
   gem 'syntax_tree-rbs'
 
