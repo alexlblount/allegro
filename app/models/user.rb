@@ -39,7 +39,8 @@ class User < ApplicationRecord
     :registerable,
     :recoverable,
     :rememberable,
-    :validatable
+    :validatable,
+    :confirmable # TODO: study up on this option!
 
   has_one :profile, dependent: :destroy
   accepts_nested_attributes_for :profile
