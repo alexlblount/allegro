@@ -9,7 +9,7 @@ ruby file: '.ruby-version'
 
 # Rails Fundamentals
 gem 'bootsnap', require: false
-gem 'pg', '~> 1.1'
+gem 'pg', '~> 1.5'
 gem 'puma', '>= 5.0'
 gem 'rails', '~> 7.2.1'
 
