@@ -288,14 +288,14 @@ module Auth
             [
               tag.h3('Delete Account', class: style(:section_heading)),
               tag.p(class: 'mt-1 text-sm text-gray-500') do
-                'Once you delete your account, there is no going back. Please be certain.'
+                'Once you delete your account, there is no going back. Please be certain.' # rubocop:disable I18n/RailsI18n/DecorateString
               end,
               tag.div(class: 'mt-4') do
                 button_to(
                   helpers.send(:registration_path, resource_name),
                   method: :delete,
                   class: style(:danger_button),
-                  form: { data: { turbo_confirm: 'Are you sure you want to delete your account?' }}
+                  form: { data: { turbo_confirm: 'Are you sure you want to delete your account?' }} # rubocop:disable I18n/RailsI18n/DecorateString
                 ) do
                   'Delete account'
                 end

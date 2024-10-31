@@ -9,7 +9,7 @@ class InstallAudited < ActiveRecord::Migration[7.2]
     # * changed audited_changes to :jsonb
     # * added gin index on audited_changes
 
-    create_table :audits do |t|
+    create_table :audits do |t| # rubocop:disable Rails/CreateTableWithTimestamps
       t.column :auditable_id, :bigint
       t.column :auditable_type, :string
       t.column :associated_id, :bigint

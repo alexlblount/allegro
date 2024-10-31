@@ -2,8 +2,8 @@
 
 require 'rails_helper'
 
-describe Auth::Button::Component do
-  subject { rendered_content }
+describe Auth::Button::Component do # rubocop:disable RSpec/SpecFilePathFormat
+  subject(:button) { rendered_content }
 
   let(:options) { {} }
   let(:component) { described_class.new(**options) }
@@ -11,6 +11,6 @@ describe Auth::Button::Component do
   it 'renders' do
     render_inline(component)
 
-    expect(subject).to have_css 'div'
+    expect(button).to have_css 'div'
   end
 end

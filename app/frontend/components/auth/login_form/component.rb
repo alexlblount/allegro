@@ -146,7 +146,7 @@ module Auth
               [
                 field.label,
                 tag.div(class: 'text-sm') do
-                  link_to 'Forgot password?',
+                  link_to 'Forgot password?', # rubocop:disable I18n/RailsI18n/DecorateString
                     helpers.send(:new_password_path, resource_name),
                     class: style(:footer_link)
                 end

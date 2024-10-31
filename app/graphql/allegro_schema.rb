@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class AllegroSchema < GraphQL::Schema
+class AllegroSchema < GraphQL::Schema # rubocop:disable GraphQL/MaxComplexitySchema, GraphQL/MaxDepthSchema
   use GraphQL::FragmentCache
   use GraphQL::PersistedQueries, compiled_queries: true, store: :redis, redis_client: { redis_url: ENV['MY_REDIS_URL'] }
 
