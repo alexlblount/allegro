@@ -62,7 +62,7 @@ gem 'alba'
 gem 'oj'
 
 # GraphQL
-gem 'graphql', '~> 2.3'
+gem 'graphql', '~> 2.4'
 # Cursor-based pagination for connections
 gem 'graphql-connections'
 # Caching for GraphQL done right
