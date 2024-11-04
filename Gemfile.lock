@@ -301,7 +301,7 @@ GEM
     graphql-connections (1.4.0)
       activerecord (>= 5)
       graphql (>= 1.10, < 3.0)
-    graphql-fragment_cache (1.20.4)
+    graphql-fragment_cache (1.20.5)
       graphql (>= 2.0.0)
       ruby-next (>= 0.15.0)
     graphql-persisted_queries (1.8.1)
